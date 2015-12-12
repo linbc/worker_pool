@@ -1,4 +1,3 @@
-#include <gtest/gtest.h>
 #include "worker_pool.h"
 #include <iostream>
 
@@ -68,7 +67,7 @@ private:
 	std::mutex mutex_callbacks_;
 };
 
-TEST(WorkerPool, AsyncCalcQuest)
+int main()
 {
 	CalcWorkerPool workers;
 
@@ -90,5 +89,6 @@ TEST(WorkerPool, AsyncCalcQuest)
 
 	workers.Stop();
 
+    return 0;
 }
 
